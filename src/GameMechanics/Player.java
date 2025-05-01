@@ -17,9 +17,7 @@ public class Player {
 
     public Bear bear = new Bear();
 
-    public void Attack(){
-        bear.health -= attackDamage;
-    }
+
 
     public void AddXP(int amount) {
         xp += amount;
