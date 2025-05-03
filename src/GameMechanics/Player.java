@@ -3,14 +3,12 @@ package GameMechanics;
 
 public class Player extends Entity {
 
-
-
     public Player(String name, byte health, boolean isAlive, byte level, byte xp, int coins, byte attackPower) {
-        super(name, health, isAlive, level, xp, coins, attackPower );
+        super(name, health, isAlive, level, xp, coins, attackPower);
     }
 
     public void levelUp(){
-        setLevel((byte) (getLevel() +1 ));
+        setLevel((byte) (getLevel() + 1 ));
         setXp((byte) 0);
     }
 
