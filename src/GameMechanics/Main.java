@@ -1,28 +1,22 @@
 package GameMechanics;
 
-import GameMechanics.Enemies.Bear;
-
 
 public class Main {
 
-    static Player player = new Player();
-    static String input;
-
-    static Core core = new Core();
-
-    static Bear bear = new Bear();
-
-
     public static void main(String[] args) {
 
-        while(player.isAlive ) {
 
-            core.StartGame();
-            core.NewGame();
+        Player player = new Player("Player", (byte) 100, true, (byte) 1, (byte) 0, 100, (byte) 10);
+
+
+        System.out.println("The players level is " + player.getLevel());
+
+        for (int i = 0; i < 10; i++) {
+            player.addXp((byte) 10);
 
         }
-        core.EndGame();
 
+        System.out.println("The players level now is " + player.getLevel());
 
 
     }
