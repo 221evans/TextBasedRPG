@@ -4,8 +4,8 @@ import GameMechanics.Entity;
 
 public class Enemy extends Entity {
 
-    public Enemy(String name, byte health, boolean isAlive, byte level, byte xp, int coins, byte attackPower){
-        super(name,health,isAlive,level,xp, coins,attackPower);
+    public Enemy(String name, byte health, boolean isAlive, byte level, byte xp, int coins, byte attackPower, boolean isTurn){
+        super(name,health,isAlive,level,xp, coins,attackPower, isTurn);
     }
 
     public int dropCoins(){

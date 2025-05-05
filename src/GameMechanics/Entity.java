@@ -13,8 +13,10 @@ public class Entity {
 
     private byte attackPower;
 
+    private boolean isTurn;
 
-    public Entity(String name , byte health, boolean isAlive , byte level , byte xp , int coins, byte attackPower) {
+
+    public Entity(String name , byte health, boolean isAlive , byte level , byte xp , int coins, byte attackPower, boolean isTurn) {
         this.name = name;
         this.health = health;
         this.isAlive = isAlive;
@@ -22,6 +24,7 @@ public class Entity {
         this.xp = xp;
         this.coins = coins;
         this.attackPower = attackPower;
+        this.isTurn = isTurn;
     }
 
     // Getters
@@ -32,6 +35,8 @@ public class Entity {
     public byte getXp() {return xp;}
     public int getCoins() {return coins;}
     public byte getAttackPower() {return attackPower;}
+    public boolean getIsTurn() {return isTurn;}
+
 
     // Setters
 
@@ -42,4 +47,5 @@ public class Entity {
     public void setXp(byte xp) {this.xp = xp;}
     public void setCoins(int coins) {this.coins = coins;}
     public void setAttackPower(byte attackPower) {this.attackPower = attackPower;}
+    public void setTurn(boolean turn) {isTurn = turn;}
 }
