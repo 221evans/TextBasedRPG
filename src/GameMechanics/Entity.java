@@ -17,14 +17,14 @@ public class Entity {
 
 
     public Entity(String name , byte health, boolean isAlive , byte level , byte xp , int coins, byte attackPower, boolean isTurn) {
-        this.name = name;
-        this.health = health;
-        this.isAlive = isAlive;
-        this.level = level;
-        this.xp = xp;
-        this.coins = coins;
-        this.attackPower = attackPower;
-        this.isTurn = isTurn;
+        setName(name);
+        setHealth(health);
+        setAlive(isAlive);
+        setLevel(level);
+        setXp(xp);
+        setCoins(coins);
+        setAttackPower(attackPower);
+        setTurn(isTurn);
     }
 
     // Getters
@@ -42,10 +42,43 @@ public class Entity {
 
     public void setName(String name) {this.name = name;}
     public void setHealth(byte health) {this.health = health;}
+
     public void setAlive(boolean alive) {isAlive = alive;}
-    public void setLevel(byte level) {this.level = level;}
-    public void setXp(byte xp) {this.xp = xp;}
-    public void setCoins(int coins) {this.coins = coins;}
-    public void setAttackPower(byte attackPower) {this.attackPower = attackPower;}
+    public void setLevel(byte level) {
+        if(level <= 0)
+        {
+            throw new IllegalArgumentException("Level cannot be less than 1");
+        }
+        else {
+            this.level = level;
+        }
+    }
+    public void setXp(byte xp) {
+        if(xp < 0)
+        {
+            throw new IllegalArgumentException("XP cannot be less than 0");
+        }
+        else {
+            this.xp = xp;
+        }
+    }
+    public void setCoins(int coins) {
+        if(coins < 0)
+        {
+            throw new IllegalArgumentException("Coins cannot be less than 0");
+        }
+        else {
+            this.coins = coins;
+        }
+    }
+
+    public void setAttackPower(byte attackPower) {
+        if(attackPower <= 0){
+            throw new IllegalArgumentException("Attack power cannot be less than 1");
+        }
+        else {
+            this.attackPower = attackPower;
+        }
+    }
     public void setTurn(boolean turn) {isTurn = turn;}
 }
